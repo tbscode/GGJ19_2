@@ -7,18 +7,29 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ground
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
+  m_Name: Sofa
+  m_Shader: {fileID: 4800000, guid: bb9cf5e43d14ca746a8437b5c8ffbfaf, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _ALPHABLEND_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    AlphaDepth: true
+    IGNOREPROJECTOR: true
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlendTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,12 +46,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DiffuseRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3d4c864c3df73b4428d8cf1263d4e7c6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -56,48 +71,42 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - PixelSnap: 0
+    - _BlendAmount: 0
+    - _Brightness: 1
     - _BumpScale: 1
+    - _Cull: 0
+    - _CustomRenderQueue: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _Dissolve: 0
+    - _DissolveEdgePower: 0.1
+    - _DissolveNoiseScale: 1
+    - _DstBlend: 10
+    - _EmissionPower: 1
+    - _EnableExternalAlpha: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
-    - _GlossyReflections: 0
-    - _LightSmoothness: 0
-    - _LightThreshold: 0.274
-    - _MKEditorShowDetailBehavior: 0
-    - _MKEditorShowDissolveBehavior: 0
-    - _MKEditorShowLightBehavior: 0
-    - _MKEditorShowMainBehavior: 1
-    - _MKEditorShowOutlineBehavior: 1
-    - _MKEditorShowReflectionBehavior: 0
-    - _MKEditorShowRenderBehavior: 1
-    - _MKEditorShowRimBehavior: 1
-    - _MKEditorShowShadowBehavior: 1
-    - _MKEditorShowSketchBehavior: 0
-    - _MKEditorShowSpecularBehavior: 1
-    - _MKEditorShowTranslucentBehavior: 0
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Hue: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineSize: 0.000001
     - _Parallax: 0.02
-    - _RimIntensity: 0
-    - _RimSize: 3
-    - _RimSmoothness: 0.5
-    - _ShadowIntensity: 0
-    - _Shininess: 0.088
+    - _RenderQueue: 0
+    - _RimPower: 2
+    - _Saturation: 1
+    - _ShadowAlphaCutoff: 0.089
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 0
-    - _SpecularIntensity: 0
+    - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveEdgeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveNoiseSpeed: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FixedNormal: {r: 0, g: 0, b: 1, a: 1}
+    - _OverlayColor: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 0.25, g: 0.25, b: 0.25, a: 0.5}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 0.5}
