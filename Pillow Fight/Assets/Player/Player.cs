@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
 
     public void Death()
     {
+        vec = Vector3.zero;
         anim.SetTrigger("Dies");
     }
 }
