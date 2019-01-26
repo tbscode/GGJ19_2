@@ -14,6 +14,9 @@ public static class FMODPaths
     //      Footsteps
 
     public static readonly string FOOTSTEPS_PEDDA = "event:/characters/pedda/footsteps_pedda";
+    public static readonly string FOOTSTEPS_TED = "event:/characters/ted/footsteps_ted";
+    public static readonly string FOOTSTEPS_JUSTIN = "event:/characters/justin/footsteps_justin";
+    public static readonly string POMPF_JUSTIN = "event:/characters/pompf/footsteps_pompf";
 
     // Throw
     public static readonly string THROW_SFX = "event:/characters/general/throw";
