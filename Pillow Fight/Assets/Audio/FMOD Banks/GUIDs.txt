@@ -1,0 +1,14 @@
+{3fbdca97-f74d-4586-b5c5-b10066a50cf2} event:/characters/justin/justin_attack
+{2d8f7d38-378f-4122-834f-96cd6f5b9782} event:/characters/pedda/pedda_attack
+{7a771cb5-9baf-4a56-aeb6-6e4dc0b0241c} event:/characters/pompf/pompf_attack
+{792bf981-bd58-4a2e-9879-715644bc3531} event:/characters/ted/ted_attack
+{f569eea6-0217-4920-971c-39395a59b43d} event:/music/music
+{27e55941-f7fb-4696-8ac3-3f904f064fce} bus:/
+{8baa2197-e7a3-427d-8cfa-8875780bf6d5} bus:/Master
+{265e659e-2599-4fac-94db-dd66c930b2e1} bus:/Master/Music
+{52e569eb-a654-43f8-970e-ba1be9318557} bus:/Master/SFX
+{71d3eb8a-4c6f-46ce-b515-18b76e2e9942} bus:/Reverb
+{da7ebe91-9043-4da8-b399-d40677a4de04} vca:/Music
+{062824fa-ed5b-41f9-be99-6c32e1485592} vca:/SFX
+{23ad5a81-4856-47b0-aaf3-2181dbdd2341} snapshot:/gotHit
+{9391cf74-5a74-4c53-8f44-2348ce1c3c7f} bank:/Master Bank
