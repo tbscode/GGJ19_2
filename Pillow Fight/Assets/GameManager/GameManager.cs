@@ -16,5 +16,10 @@ public class GameManager : MonoBehaviour
         TextMeshPro text = obj.GetComponent<TextMeshPro>();
         text.text = damage.ToString();
         Destroy(obj, 1);
+
+        obj = Instantiate(InstantObjs[1]);
+        obj.transform.position = pos;
+        pos.y += 0.5f;
+        Destroy(obj, 1);
     }
 }

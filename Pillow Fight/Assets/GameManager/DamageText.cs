@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DamageText : MonoBehaviour
 {
-    
+    public float velo;
     
     void Update()
     {
         Vector3 pos = transform.position;
-        pos.y += 1 * Time.deltaTime;
+        pos.y += velo * Time.deltaTime;
         transform.position = pos;
     }
 }
