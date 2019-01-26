@@ -1,5 +1,6 @@
 {3fbdca97-f74d-4586-b5c5-b10066a50cf2} event:/characters/justin/justin_attack
 {2d8f7d38-378f-4122-834f-96cd6f5b9782} event:/characters/pedda/pedda_attack
+{ee7c63e3-9e1f-4cae-850c-8350e0873785} event:/characters/pedda/footsteps_pedda
 {7a771cb5-9baf-4a56-aeb6-6e4dc0b0241c} event:/characters/pompf/pompf_attack
 {792bf981-bd58-4a2e-9879-715644bc3531} event:/characters/ted/ted_attack
 {f569eea6-0217-4920-971c-39395a59b43d} event:/music/music
