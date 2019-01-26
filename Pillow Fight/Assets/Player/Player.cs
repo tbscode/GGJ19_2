@@ -119,5 +119,6 @@ public class Player : MonoBehaviour
     {
         vec = Vector3.zero;
         anim.SetTrigger("Dies");
+        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.DEAD_IMPACT, GetComponent<Transform>().position);
     }
 }

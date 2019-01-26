@@ -8,12 +8,15 @@ public class Projectile : MonoBehaviour
     public int pN;
     public float currentSpeed;
     public float attack;
+
     private FMOD.Studio.EventInstance groundImpactSFX;
+    private FMOD.Studio.EventInstance wallImpactSFX;
 
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
-        groundImpactSFX = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.GROUND_IMPACT); 
+        groundImpactSFX = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.GROUND_IMPACT);
+        wallImpactSFX = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.WALL_IMPACT);
     }
 
     public void Shoot(Quaternion rot, float power)
@@ -48,6 +51,14 @@ public class Projectile : MonoBehaviour
             groundImpactSFX.start();
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(groundImpactSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
             groundImpactSFX.release();
+        }
+
+        if (col.gameObject.name == "Wall" || col.gameObject.name == "Wall (1)" || col.gameObject.name == "Wall (2)" || col.gameObject.name == "Wall (3)")
+        {
+            wallImpactSFX.setParameterValue("force", impact);
+            wallImpactSFX.start();
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(wallImpactSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            wallImpactSFX.release();
         }
 
     }

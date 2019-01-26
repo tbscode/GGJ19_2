@@ -18,7 +18,9 @@ public static class FMODPaths
     // Throw
     public static readonly string THROW_SFX = "event:/characters/general/throw";
     public static readonly string IMPACT_SFX = "event:/characters/general/impact";
+    public static readonly string DEAD_IMPACT = "event:/characters/general/dead_impact";
     public static readonly string GROUND_IMPACT = "event:/env/ground_impact";
+    public static readonly string WALL_IMPACT = "event:/env/wall_impact";
 
     //      Music
     public static readonly string MUSIC = "event:/music/music";
