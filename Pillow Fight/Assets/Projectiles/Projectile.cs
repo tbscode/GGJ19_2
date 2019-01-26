@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour
 
         float impact = col.relativeVelocity.magnitude;
         
-        if (impact > 5)
+        if (impact > 10)
         {
             if (col.gameObject.transform.tag == "Player")
             {

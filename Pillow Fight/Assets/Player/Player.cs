@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     {
         fighterPos = transform.position;
 
+        if (health <= 0) return;
+
         Move();
         Rotate();
     }

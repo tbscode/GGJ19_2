@@ -15,6 +15,8 @@ public class Character : MonoBehaviour
 
     public void Update()
     {
+        if (p.health <= 0) return;
+
         if (Input.GetButtonDown("TriggerLeft" + p.playerNumber))
         {
             Debug.Log("Button Left");
@@ -33,7 +35,7 @@ public class Character : MonoBehaviour
         GameObject obj = Instantiate(skillObj[0], p.spawn.position, Quaternion.identity);
         Projectile proj = obj.GetComponent<Projectile>();
         proj.pN = p.playerNumber;
-        proj.Shoot(transform.rotation, 1000);
+        proj.Shoot(transform.rotation, 825);
         proj.attack = 10;
 
         p.anim.SetTrigger("Attacks");
