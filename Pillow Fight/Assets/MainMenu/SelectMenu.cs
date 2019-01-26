@@ -15,6 +15,10 @@ public class SelectMenu : MonoBehaviour
         foreach(GameObject cS in charSelectBtn)
         {
             cS.GetComponent<SelectPan>().UpdateThis();
+
+            
         }
+
+        
     }
 }
