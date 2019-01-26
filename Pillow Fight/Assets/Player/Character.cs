@@ -37,6 +37,7 @@ public class Character : MonoBehaviour
         proj.pN = p.playerNumber;
         proj.Shoot(transform.rotation, 825);
         proj.attack = 10;
+        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.THROW_SFX, GetComponent<Transform>().position);
 
         p.anim.SetTrigger("Attacks");
     }

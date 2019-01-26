@@ -7,6 +7,7 @@ public class PeddaSFXAnimationHelper : MonoBehaviour
     public void PeddaFoosteps()
     {
         FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.FOOTSTEPS_PEDDA, GetComponent<Transform>().position);
-
     }
+
+   
 }
