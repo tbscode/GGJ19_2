@@ -85,17 +85,13 @@ public class Player : MonoBehaviour
 
         if(x >= 0)
         {
-            Quaternion facing = Quaternion.Euler(0, 270, 0);
-
-            picture.transform.rotation = facing;
+            picture.GetComponent<SpriteRenderer>().flipX = false;
         }
         else if(x < 0)
         {
-            Quaternion facing = Quaternion.Euler(0, 90, 0);
-
-            picture.transform.rotation = facing;
+            picture.GetComponent<SpriteRenderer>().flipX = true;
         }
-
+        picture.transform.rotation = Quaternion.Euler(0, 270, 0);
     }
 
     public void Damage(int damage, Vector3 pos)
