@@ -104,6 +104,8 @@ public class Player : MonoBehaviour
             anim.SetTrigger("isHit");
             health -= damage;
 
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.IMPACT_SFX, GetComponent<Transform>().position);
+
             if (health <= 0)
             {
                 Death();

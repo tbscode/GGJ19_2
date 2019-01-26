@@ -8,10 +8,12 @@ public class Projectile : MonoBehaviour
     public int pN;
     public float currentSpeed;
     public float attack;
+    private FMOD.Studio.EventInstance groundImpactSFX;
 
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
+        groundImpactSFX = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.GROUND_IMPACT); 
     }
 
     public void Shoot(Quaternion rot, float power)
@@ -25,7 +27,7 @@ public class Projectile : MonoBehaviour
         
 
         float impact = col.relativeVelocity.magnitude;
-        
+
         if (impact > 10)
         {
             if (col.gameObject.transform.tag == "Player")
@@ -37,10 +39,17 @@ public class Projectile : MonoBehaviour
                 player.Damage(damage, col.transform.position);
                 
             }
-
-            
+         
         }
-            
+
+        if (col.gameObject.name == "Ground")
+        {
+            groundImpactSFX.setParameterValue("force", impact);
+            groundImpactSFX.start();
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(groundImpactSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            groundImpactSFX.release();
+        }
+
     }
 
     public void Damage(int damage, Vector3 pos, Player player)
