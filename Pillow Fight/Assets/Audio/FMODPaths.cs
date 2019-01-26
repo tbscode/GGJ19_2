@@ -15,6 +15,9 @@ public static class FMODPaths
 
     public static readonly string FOOTSTEPS_PEDDA = "event:/characters/pedda/footsteps_pedda";
 
+    // Throw
+    public static readonly string THROW_SFX = "event:/characters/general/throw";
+
     //      Music
     public static readonly string MUSIC = "event:/music/music";
 
