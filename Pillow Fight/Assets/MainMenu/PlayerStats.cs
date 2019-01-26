@@ -10,4 +10,12 @@ public class PlayerStats : MonoBehaviour
     public Color pColor;
     public int pIndex;
    
+
+    public void Update()
+    {
+        if (Input.GetButtonDown("TriggerRight" + playerNumber))
+        {
+            
+        }
+    }
 }
