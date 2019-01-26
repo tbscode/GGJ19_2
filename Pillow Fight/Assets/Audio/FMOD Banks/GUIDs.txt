@@ -4,6 +4,7 @@
 {7a771cb5-9baf-4a56-aeb6-6e4dc0b0241c} event:/characters/pompf/pompf_attack
 {792bf981-bd58-4a2e-9879-715644bc3531} event:/characters/ted/ted_attack
 {41b39f89-cd79-4255-9b2f-98116258c2ee} event:/characters/general/throw
+{c46e642e-1241-48bd-888b-70c6c59b4eda} event:/characters/general/impact
 {f569eea6-0217-4920-971c-39395a59b43d} event:/music/music
 {27e55941-f7fb-4696-8ac3-3f904f064fce} bus:/
 {8baa2197-e7a3-427d-8cfa-8875780bf6d5} bus:/Master
