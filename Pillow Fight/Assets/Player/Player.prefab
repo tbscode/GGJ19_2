@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910557072}
   m_LocalRotation: {x: -0, y: -0.022541445, z: -0, w: 0.99974597}
-  m_LocalPosition: {x: 0.020000074, y: -0.73, z: -0.20999981}
+  m_LocalPosition: {x: 0.020000074, y: -0.92, z: -0.20999981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9171597168013224627}
@@ -4838,7 +4838,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 430fa49a8c0286148bbbc10a1cc4aea9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4858,12 +4858,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce53012b043166442aac697e65ecf396, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a56f3b7f1208d78408cc10cf03361734, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 11.44, y: 16.08}
+  m_Size: {x: 10, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4879,7 +4879,7 @@ Animator:
   m_GameObject: {fileID: 1804066275}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e71b5ef201258ca47a26202205da877b, type: 2}
+  m_Controller: {fileID: 9100000, guid: c2f2a93a8e3b863498396d213c8e8635, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5039,7 +5039,7 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   rot: {x: 0, y: 0, z: 0, w: 0}
   fighterPos: {x: 0, y: 0, z: 0}
-  playerNumber: 1
+  playerNumber: 2
   spawn: {fileID: 1275841135}
   picture: {fileID: 1804066275}
   anim: {fileID: 0}
@@ -5058,5 +5058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  icon: {fileID: 0}
+  pName: Ted Shredder
   skillObj:
   - {fileID: 4081875298379157528, guid: b297d33e44694424ebd8917318a8af78, type: 3}

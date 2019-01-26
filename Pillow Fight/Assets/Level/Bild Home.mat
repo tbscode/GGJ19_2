@@ -96,7 +96,7 @@ Material:
     - _RenderQueue: 0
     - _RimPower: 4.56
     - _Saturation: 0.977
-    - _ShadowAlphaCutoff: 0.1
+    - _ShadowAlphaCutoff: 0.421
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

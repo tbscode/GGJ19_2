@@ -5071,5 +5071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  icon: {fileID: 21300000, guid: a4e54c11d34502c419f11834890894d7, type: 3}
+  pName: Pedda
   skillObj:
   - {fileID: 826444352050275891, guid: 011dd13a3ce93664da6d0415c4068c83, type: 3}

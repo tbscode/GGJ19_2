@@ -6,9 +6,11 @@ public class InterSceneManager : MonoBehaviour
 {
     public static InterSceneManager iSM;
 
+    public List<PlayerStats> pS = new List<PlayerStats>();
+
     public void Start()
     {
-        DontDestroyOnLoad(gameObject);
+       DontDestroyOnLoad(gameObject);
        if(iSM == null)
         {
             iSM = this;
@@ -18,4 +20,6 @@ public class InterSceneManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 }

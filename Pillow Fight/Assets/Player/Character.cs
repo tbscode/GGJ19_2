@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
     public Player p;
+    public Sprite icon;
+    public string pName;
+    
 
     public List<GameObject> skillObj = new List<GameObject>();
 
