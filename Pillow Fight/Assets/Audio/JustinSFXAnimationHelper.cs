@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class JustinSFXAnimationHelper : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void JustinFoosteps()
     {
-        
+        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.FOOTSTEPS_JUSTIN, GetComponent<Transform>().position);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void JustinAttack()
     {
-        
+        float randValue = Random.value;
+
+        if (randValue < .45f)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.JUSTIN_ATTACK, GetComponent<Transform>().position);
+        }
     }
 }
