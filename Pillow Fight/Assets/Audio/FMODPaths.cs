@@ -11,6 +11,9 @@ public static class FMODPaths
     public static readonly string JUSTIN_ATTACK = "event:/characters/justin/justin_attack";
     public static readonly string POMPF_ATTACK = "event:/characters/pompf/pompf_attack";
 
+    //      Footsteps
+
+    public static readonly string FOOTSTEPS_PEDDA = "event:/characters/pedda/footsteps_pedda";
 
     //      Music
     public static readonly string MUSIC = "event:/music/music";
