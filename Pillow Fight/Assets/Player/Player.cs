@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     public Animator anim;
     public GameManager gm;
+    public Color pColor;
 
     public float health = 200;
 
@@ -48,12 +49,12 @@ public class Player : MonoBehaviour
         if (speed > 0)
         {
             rb.velocity = vec * speed;
-            transform.position = fighterPos;          
+            transform.position = fighterPos;
 
         }
-        
 
-        if(y != 0|| x != 0)
+
+        if (y != 0 || x != 0)
         {
             anim.SetBool("isRunning", true);
         }
@@ -69,7 +70,7 @@ public class Player : MonoBehaviour
         float y = Input.GetAxis("VerticalRight" + playerNumber);
         float x = Input.GetAxis("HorizontalRight" + playerNumber);
 
-        if(y != 0 || x != 0)
+        if (y != 0 || x != 0)
         {
 
         }
@@ -80,14 +81,14 @@ public class Player : MonoBehaviour
 
         var angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, -angle, 0);
-        
+
         //==========================
 
-        if(x >= 0)
+        if (x >= 0)
         {
             picture.GetComponent<SpriteRenderer>().flipX = false;
         }
-        else if(x < 0)
+        else if (x < 0)
         {
             picture.GetComponent<SpriteRenderer>().flipX = true;
         }
@@ -96,9 +97,9 @@ public class Player : MonoBehaviour
 
     public void Damage(int damage, Vector3 pos)
     {
-        if(health > 0)
+        if (health > 0)
         {
-            
+
             gm.DamageText(pos, damage);
 
             anim.SetTrigger("isHit");
@@ -112,13 +113,31 @@ public class Player : MonoBehaviour
             }
         }
 
-        
+
     }
 
     public void Death()
     {
         vec = Vector3.zero;
         anim.SetTrigger("Dies");
-        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.DEAD_IMPACT, GetComponent<Transform>().position);
+
+        GameManager gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM.FightIsOn = false;
+        gM.counter = 3;
+
+        int winner = 0;
+
+        foreach (Player p in gM.pList)
+        {
+            if (p.health > 0)
+            {
+                winner = p.playerNumber;
+                gM.GameEnds(p);
+            }
+
+
+        }
+
+
     }
 }
