@@ -14,14 +14,16 @@ public static class FMODPaths
     //      Footsteps
 
     public static readonly string FOOTSTEPS_PEDDA = "event:/characters/pedda/footsteps_pedda";
-    public static readonly string FOOTSTEPS_TED = "event:/characters/pedda/footsteps_pedda";
-    public static readonly string FOOTSTEPS_POMPF = "event:/characters/pedda/footsteps_pedda";
-    public static readonly string FOOTSTEPS_JUSTIN = "event:/characters/pedda/footsteps_pedda";
+    public static readonly string FOOTSTEPS_TED = "event:/characters/ted/footsteps_ted";
+    public static readonly string FOOTSTEPS_JUSTIN = "event:/characters/justin/footsteps_justin";
+    public static readonly string FOOTSTEPS_POMPF = "event:/characters/pompf/footsteps_pompf";
 
     // Throw
     public static readonly string THROW_SFX = "event:/characters/general/throw";
     public static readonly string IMPACT_SFX = "event:/characters/general/impact";
+    public static readonly string DEAD_IMPACT = "event:/characters/general/dead_impact";
     public static readonly string GROUND_IMPACT = "event:/env/ground_impact";
+    public static readonly string WALL_IMPACT = "event:/env/wall_impact";
 
     //      Music
     public static readonly string MUSIC = "event:/music/music";
