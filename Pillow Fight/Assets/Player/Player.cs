@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     public Animator anim;
     public GameManager gm;
+    public Color pColor;
 
     public float health = 200;
 
@@ -119,5 +120,24 @@ public class Player : MonoBehaviour
     {
         vec = Vector3.zero;
         anim.SetTrigger("Dies");
+
+        GameManager gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM.FightIsOn = false;
+        gM.counter = 3;
+
+        int winner = 0;
+
+        foreach(Player p in gM.pList)
+        {
+            if(p.health > 0)
+            {
+                winner = p.playerNumber;
+                gM.GameEnds(p);
+            }
+
+
+        }
+
+        
     }
 }

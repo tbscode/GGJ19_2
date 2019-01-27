@@ -41,4 +41,12 @@ public class InterSceneManager : MonoBehaviour
 
 
     }
+
+    public void EndFight()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+        mM.StartPan.SetActive(true);
+        mM.SelectPan.SetActive(false);
+    }
 }

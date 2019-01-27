@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public List<Transform> startPos = new List<Transform>();
     public List<HealthBar> bars = new List<HealthBar>();
 
+    public TextMeshProUGUI victoryText;
+
+    public bool FightIsOn;
+    public float counter;
+
     public void DamageText(Vector3 pos, int damage)
     {
         pos.y += 0;
@@ -50,9 +55,37 @@ public class GameManager : MonoBehaviour
             Player p = obj.GetComponent<Player>();
             p.playerNumber = pS.playerNumber;
             p.health = 200;
+            p.pColor = pS.pColor;
 
             pList.Add(p);
             bars[pS.playerNumber - 1].player = p;
         }
+
+        FightIsOn = true;
+
+
+    }
+
+    public void Update()
+    {
+        if(FightIsOn == false)
+        {
+            if(counter > 0)
+            {
+                counter -= 1 * Time.deltaTime;
+            }
+            else
+            {
+                iSM.EndFight();
+            }
+
+        }
+    }
+
+    public void GameEnds(Player p)
+    {
+        victoryText.gameObject.SetActive(true);
+        victoryText.text = p.gameObject.GetComponent<Character>().pName + " Wins!";
+        victoryText.color = p.pColor;
     }
 }
