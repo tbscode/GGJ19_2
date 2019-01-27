@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SelectPan : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class SelectPan : MonoBehaviour
     public List<GameObject> selectIcon = new List<GameObject>();
 
     public Animator anim;
+    public TextMeshProUGUI cName;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class SelectPan : MonoBehaviour
         iSM = GameObject.Find("InterSceneManager").GetComponent<InterSceneManager>();
 
         img.sprite = chara.GetComponent<Character>().icon;
+        cName.text = chara.GetComponent<Character>().pName;
 
         foreach (PlayerStats pS in iSM.pS)
         {

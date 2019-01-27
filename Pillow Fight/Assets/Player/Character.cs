@@ -23,7 +23,7 @@ public class Character : MonoBehaviour
 
         if (Input.GetButtonDown("TriggerLeft" + p.playerNumber))
         {
-            if(p.energy >= 100)
+            if(p.energy >= 60)
             {
                 p.energy = 1;
                 Special();
