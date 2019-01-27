@@ -33,6 +33,9 @@ public static class FMODPaths
     public static readonly string MUSIC = "event:/music/music";
     public static readonly string AMBIENT = "event:/music/ambient";
 
+    // Intro
+    public static readonly string INTRO_VOICE = "event:/intro/voice";
+
     //      VCAs
     public static readonly string VCA_MUSIC = "vca:/Music";
     public static readonly string VCA_SFX = "vca:/SFX";

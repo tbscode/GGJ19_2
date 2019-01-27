@@ -16,6 +16,7 @@
 {a5744b4b-daae-416e-96d3-fdcfbdc7fbb1} event:/music/ambient
 {61e0e5b0-6021-4b4a-8292-d85f6e90360a} event:/ui/UI_select
 {bb014c46-cd85-4c3e-a763-f488a2230d0f} event:/ui/UI_confirmation
+{cb9bb697-0819-4fd8-ac0a-0fda9290ecb5} event:/intro/voice
 {27e55941-f7fb-4696-8ac3-3f904f064fce} bus:/
 {8baa2197-e7a3-427d-8cfa-8875780bf6d5} bus:/Master
 {265e659e-2599-4fac-94db-dd66c930b2e1} bus:/Master/Music
