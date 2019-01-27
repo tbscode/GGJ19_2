@@ -36,7 +36,7 @@ public class Shockwave : MonoBehaviour
     {
         if(col.transform.tag =="Pillow")
         {
-            float power = 5000;
+            float power = 7500;
 
             Vector3 colPos = col.transform.position;
             Vector3 pos = transform.position;

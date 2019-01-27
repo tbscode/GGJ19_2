@@ -26,9 +26,13 @@ public class DivineShield : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        
+
         if (other.transform.tag == "Pillow")
         {
-            float power = 250;
+            Debug.Log("Pillow!!!");
+
+            float power = 2000;
 
             Vector3 colPos = other.transform.position;
             Vector3 pos = transform.position;

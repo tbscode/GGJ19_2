@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class InterSceneManager : MonoBehaviour
 {
@@ -12,9 +13,14 @@ public class InterSceneManager : MonoBehaviour
     public float optionsCounter;
 
     public List<PlayerStats> pS = new List<PlayerStats>();
+    public List<TextMeshProUGUI> txtList = new List<TextMeshProUGUI>();
+    public Color tColor;
+    public Color selectColor;
 
     public void Start()
     {
+        
+
        DontDestroyOnLoad(gameObject);
        if(iSM == null)
         {
@@ -27,16 +33,20 @@ public class InterSceneManager : MonoBehaviour
 
         mM = GameObject.Find("MainMenu").GetComponent<MainMenu>();
         AudioManager.instance.MusicStart();
+
+        tColor = txtList[0].color;
     }
 
     public void Update()
     {
         if (Input.GetButtonDown("Submit"))
         {
+            Debug.Log("Hallo!");
             if(optionsPanel.activeSelf == false)
             {
                 optionsPanel.SetActive(true);
                 optionsInt = 0;
+                UpdateOptions();
             }
             else
             {
@@ -48,7 +58,7 @@ public class InterSceneManager : MonoBehaviour
 
         if (optionsPanel.activeSelf == true)
         {
-            optionsPanel.SetActive(false);
+            
 
             float y = Input.GetAxis("VerticalLeft" + 1);
 
@@ -71,6 +81,7 @@ public class InterSceneManager : MonoBehaviour
                         optionsInt = 2;
                     }
                 }
+                UpdateOptions();
             }
 
 
@@ -108,6 +119,16 @@ public class InterSceneManager : MonoBehaviour
 
     }
 
+    public void UpdateOptions()
+    {
+        foreach(TextMeshProUGUI t in txtList)
+        {
+            t.color = tColor;
+        }
+
+        txtList[optionsInt].color = selectColor;
+    }
+
     public void StartFight()
     {
         SceneManager.LoadScene("SampleScene");
@@ -132,5 +153,7 @@ public class InterSceneManager : MonoBehaviour
         AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Transition", 0);
         AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Vocals", 0);
         AudioManager.instance.SetParameterInt(AudioManager.instance.music, "SpielEnde", 0);
+
+        optionsPanel.SetActive(false);
     }
 }

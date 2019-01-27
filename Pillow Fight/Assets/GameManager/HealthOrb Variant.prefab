@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &99851087809005583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948453625504908238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d5568d73bb696438ed09182e422a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 4385033716566848956, guid: 2fe8ec656c87b9442b73475d0f791db5,
+    type: 3}
+  spawnEffect: {fileID: 230251587142666639, guid: cb2d9240b4dd22549ab2de75b04f0851,
+    type: 3}
 --- !u!1001 &1196505386991461744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,22 +26,22 @@ PrefabInstance:
     - target: {fileID: 6068221260133918398, guid: 742fd0adbf9fc844b9961437cbd33f55,
         type: 3}
       propertyPath: m_Name
-      value: HealthOrb Variant
+      value: EnergyOrb
       objectReference: {fileID: 0}
     - target: {fileID: 7326591291593968285, guid: 742fd0adbf9fc844b9961437cbd33f55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: 7326591291593968285, guid: 742fd0adbf9fc844b9961437cbd33f55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 7326591291593968285, guid: 742fd0adbf9fc844b9961437cbd33f55,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.276
+      value: 1.310987
       objectReference: {fileID: 0}
     - target: {fileID: 7326591291593968285, guid: 742fd0adbf9fc844b9961437cbd33f55,
         type: 3}
@@ -67,5 +83,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 339126728051280607, guid: 742fd0adbf9fc844b9961437cbd33f55,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54154d5e4e982e84ba11178198e2df85, type: 2}
+    - target: {fileID: 6022460682501202127, guid: 742fd0adbf9fc844b9961437cbd33f55,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.46366778
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022460682501202127, guid: 742fd0adbf9fc844b9961437cbd33f55,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.48884967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022460682501202127, guid: 742fd0adbf9fc844b9961437cbd33f55,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.9852941
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 612920998822323946, guid: 742fd0adbf9fc844b9961437cbd33f55, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 742fd0adbf9fc844b9961437cbd33f55, type: 3}
+--- !u!1 &4948453625504908238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6068221260133918398, guid: 742fd0adbf9fc844b9961437cbd33f55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1196505386991461744}
+  m_PrefabAsset: {fileID: 0}

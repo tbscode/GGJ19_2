@@ -21,7 +21,7 @@ public class SelectPan : MonoBehaviour
 
     public void UpdateThis()
     {
-        img = GetComponent<Image>();
+        
 
         iSM = GameObject.Find("InterSceneManager").GetComponent<InterSceneManager>();
 

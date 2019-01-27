@@ -19,6 +19,17 @@ public class TornadoSupport : MonoBehaviour
         {
             Physics.IgnoreCollision(collision.collider, col);
         }
+        else
+        {
+            float power = 2000;
+
+            Vector3 colPos = col.transform.position;
+            Vector3 pos = transform.position;
+
+            Vector3 direction = colPos - pos;
+
+            col.gameObject.GetComponent<Rigidbody>().AddForce(direction * power);
+        }
 
     }
 }
