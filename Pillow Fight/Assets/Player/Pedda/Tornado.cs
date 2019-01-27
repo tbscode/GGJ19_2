@@ -13,7 +13,7 @@ public class Tornado : MonoBehaviour
     {
         TornadoCol.transform.Rotate(Vector3.right * Time.deltaTime * speed);
 
-        transform.Translate(Vector3.forward * Time.deltaTime);
+        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
 
         if(lifeTime > 0)
         {

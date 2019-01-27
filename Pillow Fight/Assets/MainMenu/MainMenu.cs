@@ -6,6 +6,8 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject StartPan;
     public GameObject SelectPan;
+    public GameObject StartKulisse;
+    public GameObject SelectKulisse;
 
     public InterSceneManager iSM;
 
@@ -18,7 +20,9 @@ public class MainMenu : MonoBehaviour
             if(Input.anyKey == true)
             {
                 StartPan.SetActive(false);
+                StartKulisse.SetActive(false);
                 SelectPan.SetActive(true);
+                SelectKulisse.SetActive(true);
 
                 foreach (PlayerStats pS in iSM.pS)
                 {

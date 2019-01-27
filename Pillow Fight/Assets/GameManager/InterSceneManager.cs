@@ -51,6 +51,8 @@ public class InterSceneManager : MonoBehaviour
 
         mM.StartPan.SetActive(true);
         mM.SelectPan.SetActive(false);
+        mM.StartKulisse.SetActive(true);
+        mM.SelectKulisse.SetActive(false);
 
         AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Transition", 0);
         AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Vocals", 0);

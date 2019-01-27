@@ -57,7 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TornadoCol: {fileID: 808281542239460140}
   speed: 1000
-  moveSpeed: 6
+  moveSpeed: 1
   lifeTime: 6
 --- !u!54 &808281541911423204
 Rigidbody:

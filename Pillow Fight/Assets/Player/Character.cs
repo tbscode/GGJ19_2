@@ -60,12 +60,40 @@ public class Character : MonoBehaviour
 
             p.anim.SetTrigger("Attacks");
         }
+        else if(pName == "Ted Shredder")
+        {
+            GameObject obj = Instantiate(skillObj[1], p.spawn.position, Quaternion.identity);
+            Shockwave tor = obj.GetComponent<Shockwave>();
+            tor.transform.rotation = transform.rotation;
+
+            p.anim.SetTrigger("Attacks");
+        }
+        else if (pName == "Pompf")
+        {
+            GameObject obj = Instantiate(skillObj[1], transform.position, Quaternion.identity);
+            
+
+            p.anim.SetTrigger("Attacks");
+        }
+        else if (pName == "Justin")
+        {
+            if(skillObj[1].activeSelf == false)
+            {
+                skillObj[1].SetActive(true);
+                skillObj[1].GetComponent<DivineShield>().lifeTime = 5;
+            }
+
+            
 
 
-        
-        
-        
+            p.anim.SetTrigger("Attacks");
+        }
 
-        
+
+
+
+
+
+
     }
 }
