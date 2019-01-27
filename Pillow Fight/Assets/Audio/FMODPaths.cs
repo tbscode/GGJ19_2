@@ -25,8 +25,16 @@ public static class FMODPaths
     public static readonly string GROUND_IMPACT = "event:/env/ground_impact";
     public static readonly string WALL_IMPACT = "event:/env/wall_impact";
 
+    // UI
+    public static readonly string UI_SELECT = "event:/ui/UI_select";
+    public static readonly string UI_CONFIRM = "event:/ui/UI_confirmation";
+
     //      Music
     public static readonly string MUSIC = "event:/music/music";
+    public static readonly string AMBIENT = "event:/music/ambient";
+
+    // Intro
+    public static readonly string INTRO_VOICE = "event:/intro/voice";
 
     //      VCAs
     public static readonly string VCA_MUSIC = "vca:/Music";

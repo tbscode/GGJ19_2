@@ -11,3 +11,7 @@ Pillow Fight the Game!
 - pseudo 3D
 
 ![screenshot](https://github.com/tbscode/GGJ19_2/blob/master/screenshot.png)
+
+#### Possible Divercefiers:
+-  Puzzle design challenge (Sponsored by Red Bull Mind Gamers and The Tetris Company®) : Make your game around, or inspired by a real world toy you have played with in your lifetime. 
+-  Language-Independence (Sponsored by Valve Software): Create a game that can be understood regardless of which language the player speaks. 
