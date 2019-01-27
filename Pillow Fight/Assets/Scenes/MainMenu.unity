@@ -1473,8 +1473,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 3103784959
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.72156864}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
   m_inputSource: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -16507,15 +16507,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: bbe03f48b7af4ef4d99670c6b6cb38a8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

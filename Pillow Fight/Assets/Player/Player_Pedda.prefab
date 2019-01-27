@@ -5057,7 +5057,9 @@ MonoBehaviour:
   picture: {fileID: 6164070898917336845}
   anim: {fileID: 0}
   gm: {fileID: 0}
+  pColor: {r: 0, g: 0, b: 0, a: 0}
   health: 200
+  energy: 100
 --- !u!114 &7206180488003863175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5075,3 +5077,4 @@ MonoBehaviour:
   pName: Pedda
   skillObj:
   - {fileID: 826444352050275891, guid: 011dd13a3ce93664da6d0415c4068c83, type: 3}
+  - {fileID: 808281541911423200, guid: f33d9ae75ad831a47a1534433cea7d77, type: 3}

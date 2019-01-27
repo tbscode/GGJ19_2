@@ -23,7 +23,11 @@ public class Character : MonoBehaviour
 
         if (Input.GetButtonDown("TriggerLeft" + p.playerNumber))
         {
-            Debug.Log("Button Left");
+            if(p.energy >= 100)
+            {
+                p.energy = 0;
+                Special();
+            }
         }
         
         if (Input.GetButtonDown("TriggerRight" + p.playerNumber))
@@ -35,7 +39,7 @@ public class Character : MonoBehaviour
 
     public void Shoot()
     {
-        Debug.Log("Button Right");
+        
         GameObject obj = Instantiate(skillObj[0], p.spawn.position, Quaternion.identity);
         Projectile proj = obj.GetComponent<Projectile>();
         proj.pN = p.playerNumber;
@@ -44,5 +48,24 @@ public class Character : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.THROW_SFX, GetComponent<Transform>().position);
 
         p.anim.SetTrigger("Attacks");
+    }
+
+    public void Special()
+    {
+        if(pName == "Pedda")
+        {
+            GameObject obj = Instantiate(skillObj[1], p.spawn.position, Quaternion.identity);
+            Tornado tor = obj.GetComponent<Tornado>();
+            tor.transform.rotation = transform.rotation;
+
+            p.anim.SetTrigger("Attacks");
+        }
+
+
+        
+        
+        
+
+        
     }
 }
