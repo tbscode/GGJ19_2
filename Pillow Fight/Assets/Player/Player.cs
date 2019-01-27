@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     public float health = 200;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -108,6 +109,7 @@ public class Player : MonoBehaviour
             health -= damage;
 
             FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.IMPACT_SFX, GetComponent<Transform>().position);
+
 
             if (health <= 0)
             {
