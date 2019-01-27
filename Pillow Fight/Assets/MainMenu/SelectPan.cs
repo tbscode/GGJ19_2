@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +33,22 @@ public class SelectPan : MonoBehaviour
             if (pS.pIndex == index)
             {
                 selectIcon[pS.playerNumber-1].SetActive(true);
-                
+                switch (index)
+                {
+                    case 0:
+                  //      FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_PEDDA); Geht nicht : (
+                        break;
+                    case 1:
+                        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_TED);
+                        break;
+                    case 2:
+                        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_POMPF);
+                        break;
+                    case 3:
+                        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_JUSTIN);
+                        break;               
+                }
+
             }
             else
             {
