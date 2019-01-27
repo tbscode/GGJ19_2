@@ -4,7 +4,7 @@ public class AudioManager : MonoBehaviour
 {
 
     public static AudioManager instance = null;
-    private FMOD.Studio.EventInstance music;
+    public FMOD.Studio.EventInstance music;
 
     void Awake()
     {
@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
             instance = this;
 
             //Je nach dem ob wir mehr scenes haben
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else if (instance != this)
         {
