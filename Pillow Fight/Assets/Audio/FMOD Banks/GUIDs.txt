@@ -16,6 +16,7 @@
 {8baa2197-e7a3-427d-8cfa-8875780bf6d5} bus:/Master
 {265e659e-2599-4fac-94db-dd66c930b2e1} bus:/Master/Music
 {52e569eb-a654-43f8-970e-ba1be9318557} bus:/Master/SFX
+{86292352-b8b2-4f26-b403-2f093e72a039} bus:/Master/SFX/characters
 {71d3eb8a-4c6f-46ce-b515-18b76e2e9942} bus:/Reverb
 {da7ebe91-9043-4da8-b399-d40677a4de04} vca:/Music
 {062824fa-ed5b-41f9-be99-6c32e1485592} vca:/SFX
