@@ -31,9 +31,11 @@ public class Player : MonoBehaviour
         fighterPos = transform.position;
 
         if (health <= 0) return;
-
+        
         Move();
         Rotate();
+
+        AudioManager.instance.SetParameterFloat(AudioManager.instance.music, "health", health);
     }
 
 
@@ -120,6 +122,9 @@ public class Player : MonoBehaviour
     {
         vec = Vector3.zero;
         anim.SetTrigger("Dies");
+        FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.DEAD_IMPACT, GetComponent<Transform>().position);
+        AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Transition", 0);
+        AudioManager.instance.SetParameterInt(AudioManager.instance.music, "SpielEnde", 1);
 
         GameManager gM = GameObject.Find("GameManager").GetComponent<GameManager>();
         gM.FightIsOn = false;

@@ -23,6 +23,7 @@ public class InterSceneManager : MonoBehaviour
         }
 
         mM = GameObject.Find("MainMenu").GetComponent<MainMenu>();
+        AudioManager.instance.MusicStart();
     }
 
     public void Update()
@@ -39,6 +40,8 @@ public class InterSceneManager : MonoBehaviour
         mM.StartPan.SetActive(false);
         mM.SelectPan.SetActive(false);
 
+        AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Transition", 1);
+
 
     }
 
@@ -48,5 +51,9 @@ public class InterSceneManager : MonoBehaviour
 
         mM.StartPan.SetActive(true);
         mM.SelectPan.SetActive(false);
+
+        AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Transition", 0);
+        AudioManager.instance.SetParameterInt(AudioManager.instance.music, "Vocals", 0);
+        AudioManager.instance.SetParameterInt(AudioManager.instance.music, "SpielEnde", 0);
     }
 }
