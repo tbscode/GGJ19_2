@@ -2,8 +2,10 @@
 {c46e642e-1241-48bd-888b-70c6c59b4eda} event:/characters/general/impact
 {41b39f89-cd79-4255-9b2f-98116258c2ee} event:/characters/general/throw
 {9d12ceae-d5db-426f-8961-e171fa59e903} event:/characters/general/power_tornado
-{a6301fdd-e34b-4784-a2cb-18d63179a11e} event:/characters/general/power_ice
+{a6301fdd-e34b-4784-a2cb-18d63179a11e} event:/characters/general/power_wave
 {11fb8ead-d3b6-472e-ab45-04bc7bf40020} event:/characters/general/power_shield
+{f2517474-f69d-4efc-94b9-0ee8fa21f9d0} event:/characters/general/power_ice
+{0756cbff-9bf6-46ba-9bef-9536f67e78f4} event:/characters/general/take_power
 {545ec25a-ada8-4fd0-81dd-1c25ecb18cfd} event:/characters/justin/footsteps_justin
 {3fbdca97-f74d-4586-b5c5-b10066a50cf2} event:/characters/justin/justin_attack
 {ee7c63e3-9e1f-4cae-850c-8350e0873785} event:/characters/pedda/footsteps_pedda

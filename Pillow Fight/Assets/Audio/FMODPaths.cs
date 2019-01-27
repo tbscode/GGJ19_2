@@ -37,7 +37,11 @@ public static class FMODPaths
 
     // powers
     public static readonly string POWER_TORNADO = "event:/characters/general/power_tornado";
+    public static readonly string POWER_WAVE = "event:/characters/general/power_wave";
     public static readonly string POWER_ICE = "event:/characters/general/power_ice";
+    public static readonly string POWER_SHIELD = "event:/characters/general/power_shield";
+    public static readonly string POWER_TAKE = "event:/characters/general/take_power";
+
 
     //      Music
     public static readonly string MUSIC = "event:/music/music";

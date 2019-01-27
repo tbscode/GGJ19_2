@@ -9498,7 +9498,7 @@ GameObject:
   - component: {fileID: 1488046339}
   - component: {fileID: 1488046338}
   - component: {fileID: 1488046337}
-  - component: {fileID: 1488046336}
+  - component: {fileID: 2261371366456376522}
   m_Layer: 0
   m_Name: 2DSprite
   m_TagString: Untagged
@@ -9587,7 +9587,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1488046336
+--- !u!114 &2261371366456376522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9596,7 +9596,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488046335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7449a33f8127854ca765d77a579f950, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c9c99fc5f6f2014aac80b0d6c44685a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1687554044
