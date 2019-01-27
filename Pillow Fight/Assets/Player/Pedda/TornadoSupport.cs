@@ -21,7 +21,7 @@ public class TornadoSupport : MonoBehaviour
         }
         else
         {
-            float power = 2000;
+            float power = 5000;
 
             Vector3 colPos = col.transform.position;
             Vector3 pos = transform.position;

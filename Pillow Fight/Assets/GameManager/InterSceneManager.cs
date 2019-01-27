@@ -113,10 +113,7 @@ public class InterSceneManager : MonoBehaviour
         {
             optionsCounter -= 1 * Time.deltaTime;
 
-        }
-
-        
-
+        }     
     }
 
     public void UpdateOptions()

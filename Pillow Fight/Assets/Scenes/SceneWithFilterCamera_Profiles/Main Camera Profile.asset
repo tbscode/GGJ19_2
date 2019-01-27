@@ -20,6 +20,8 @@ MonoBehaviour:
   - {fileID: 114800755754380482}
   - {fileID: 114678983982893552}
   - {fileID: 114890876254320152}
+  - {fileID: 114600356161415226}
+  - {fileID: 114928599700095470}
 --- !u!114 &114377909150427838
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -41,13 +43,62 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.397
+    value: 0.173
   size:
     overrideState: 1
     value: 0.9
   lumContrib:
     overrideState: 0
     value: 0.8
+--- !u!114 &114600356161415226
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 0
+    value: 1
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 0
+    value: 0.25
+  quality:
+    overrideState: 0
+    value: 2
 --- !u!114 &114656579462462832
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -69,7 +120,7 @@ MonoBehaviour:
     value: -61.2
   intensityX:
     overrideState: 1
-    value: 1
+    value: 0.664
   intensityY:
     overrideState: 1
     value: 1
@@ -1437,13 +1488,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 30.61
+    value: 60
   threshold:
     overrideState: 1
-    value: 2.59
+    value: 2
   softKnee:
     overrideState: 1
-    value: 0.5
+    value: 0.545
   clamp:
     overrideState: 1
     value: 65472
@@ -1478,21 +1529,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   focusDistance:
     overrideState: 1
-    value: 10
+    value: 50
   aperture:
     overrideState: 1
-    value: 8.5
+    value: 9.2
   focalLength:
     overrideState: 1
     value: 50
   kernelSize:
     overrideState: 1
+    value: 1
+--- !u!114 &114928599700095470
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
+  m_Name: AutoExposure
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  filtering:
+    overrideState: 1
+    value: {x: 52.541603, y: 97.54162}
+  minLuminance:
+    overrideState: 0
+    value: 0
+  maxLuminance:
+    overrideState: 1
+    value: 0
+  keyValue:
+    overrideState: 0
+    value: 1
+  eyeAdaptation:
+    overrideState: 1
+    value: 0
+  speedUp:
+    overrideState: 0
+    value: 2
+  speedDown:
+    overrideState: 0
     value: 1
 --- !u!114 &114954463572078522
 MonoBehaviour:
