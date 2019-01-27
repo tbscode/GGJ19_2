@@ -2,8 +2,10 @@
 {41b39f89-cd79-4255-9b2f-98116258c2ee} event:/characters/general/throw
 {a06ceaf8-13a2-4d7c-abe9-433654a153e8} event:/characters/general/dead_impact
 {3fbdca97-f74d-4586-b5c5-b10066a50cf2} event:/characters/justin/justin_attack
+{545ec25a-ada8-4fd0-81dd-1c25ecb18cfd} event:/characters/justin/footsteps_justin
 {ee7c63e3-9e1f-4cae-850c-8350e0873785} event:/characters/pedda/footsteps_pedda
 {2d8f7d38-378f-4122-834f-96cd6f5b9782} event:/characters/pedda/pedda_attack
+{94984316-7899-4971-b695-15ca8a30b335} event:/characters/pompf/footsteps_pompf
 {7a771cb5-9baf-4a56-aeb6-6e4dc0b0241c} event:/characters/pompf/pompf_attack
 {792bf981-bd58-4a2e-9879-715644bc3531} event:/characters/ted/ted_attack
 {725fb4b6-391c-40ce-8b0c-1baf9c7e0bd6} event:/characters/ted/footsteps_ted
