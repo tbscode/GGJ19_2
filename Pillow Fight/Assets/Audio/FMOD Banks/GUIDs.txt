@@ -16,6 +16,10 @@
 {a5744b4b-daae-416e-96d3-fdcfbdc7fbb1} event:/music/ambient
 {61e0e5b0-6021-4b4a-8292-d85f6e90360a} event:/ui/UI_select
 {bb014c46-cd85-4c3e-a763-f488a2230d0f} event:/ui/UI_confirmation
+{06c6509e-d5f2-4ed5-beb0-b357e68953cc} event:/ui/ui_justin
+{19335f5b-be31-40dc-85f9-10593dc1a055} event:/ui/ui_ted
+{e46d47a0-f944-4983-81cb-18437aef16b1} event:/ui/ui_pompf
+{c0bbd408-ec35-4d2e-acac-5864fcde81ed} event:/ui/ui_pedda
 {cb9bb697-0819-4fd8-ac0a-0fda9290ecb5} event:/intro/voice
 {27e55941-f7fb-4696-8ac3-3f904f064fce} bus:/
 {8baa2197-e7a3-427d-8cfa-8875780bf6d5} bus:/Master
