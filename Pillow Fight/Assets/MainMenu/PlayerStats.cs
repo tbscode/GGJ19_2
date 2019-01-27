@@ -36,7 +36,7 @@ public class PlayerStats : MonoBehaviour
                 {
                     if (x > 0)
                     {
-                        counter = 0.5f;
+                        counter = 0.25f;
                         
 
                         pIndex += 1;
@@ -49,7 +49,7 @@ public class PlayerStats : MonoBehaviour
                     }
                     else if (x < 0)
                     {
-                        counter = 0.33f;
+                        counter = 0.25f;
                         
 
                         pIndex -= 1;
