@@ -20,7 +20,12 @@ public class VideoClip : MonoBehaviour
 
     public void Pic3()
     {
-        text.text = "Let's do some property damage with these things!";
+        text.text = "Let's have a pillow fight against each other!";
+    }
+
+    public void Intermezzo()
+    {
+        text.text = "";
     }
 
     public void EndScene()
@@ -37,8 +42,5 @@ public class VideoClip : MonoBehaviour
         }
     }
 
-    public void ClearText()
-    {
-        text.text = "";
-    }
+    
 }

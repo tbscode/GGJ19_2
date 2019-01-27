@@ -174,7 +174,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.8461537
+  - time: 3.5384614
+    functionName: Intermezzo
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4
     functionName: EndScene
     data: 
     objectReferenceParameter: {fileID: 0}

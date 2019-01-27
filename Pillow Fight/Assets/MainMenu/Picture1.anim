@@ -174,8 +174,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.7692308
-    functionName: ClearText
+  - time: 3.5384614
+    functionName: Intermezzo
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
