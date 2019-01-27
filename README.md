@@ -10,4 +10,4 @@ Pillow Fight the Game!
 - Local Multiplayer
 - pseudo 3D
 
-![screenshot](screenshot)
+![screenshot](https://github.com/tbscode/GGJ19_2/blob/master/screenshot.png)
