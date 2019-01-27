@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
         {
             if (col.gameObject.transform.tag == "Player")
             {
-                Debug.Log(impact);
+                
                 int damage = Mathf.RoundToInt(impact);
                 Player player = col.gameObject.GetComponent<Player>();
 

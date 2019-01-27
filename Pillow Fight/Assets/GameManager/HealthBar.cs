@@ -15,6 +15,10 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        slide.value = player.health;
+        if(slide != null && player != null)
+        {
+            slide.value = player.health;
+        }
+        
     }
 }

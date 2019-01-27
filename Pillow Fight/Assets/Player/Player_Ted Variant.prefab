@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3569757102167554146, guid: b0af8013c05b8f04fac7d5c57489b3c8,
         type: 3}
       propertyPath: m_Name
-      value: Player_Ted Variant
+      value: Player_Ted
       objectReference: {fileID: 0}
     - target: {fileID: 9171597168013224627, guid: b0af8013c05b8f04fac7d5c57489b3c8,
         type: 3}
@@ -88,6 +88,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2a7c6ce201f1d1e4bbc0428398f3b1d9,
         type: 3}
+    - target: {fileID: 3569757102167554153, guid: b0af8013c05b8f04fac7d5c57489b3c8,
+        type: 3}
+      propertyPath: skillObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 3937639904881565276, guid: 14f28acb0ad925f4a96f589c736cd19a,
+        type: 3}
+    - target: {fileID: 910557075, guid: b0af8013c05b8f04fac7d5c57489b3c8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 910557075, guid: b0af8013c05b8f04fac7d5c57489b3c8, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 910557075, guid: b0af8013c05b8f04fac7d5c57489b3c8, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 910557075, guid: b0af8013c05b8f04fac7d5c57489b3c8, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.a
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 910557075, guid: b0af8013c05b8f04fac7d5c57489b3c8, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 910557075, guid: b0af8013c05b8f04fac7d5c57489b3c8, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime3
+      value: 65150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0af8013c05b8f04fac7d5c57489b3c8, type: 3}
 --- !u!54 &1131051282867086887 stripped

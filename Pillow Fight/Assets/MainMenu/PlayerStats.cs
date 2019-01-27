@@ -22,41 +22,76 @@ public class PlayerStats : MonoBehaviour
 
     public void Update()
     {
+        
+
+        mM = GameObject.Find("MainMenu").GetComponent<MainMenu>();
+
         if (mM.SelectPan.activeSelf == true)
         {
-            if(counter <= 0)
+            float x = Input.GetAxis("HorizontalLeft" + playerNumber);
+
+            if(pPrefab == null)
             {
-                counter = 1f;
-
-                float x = Input.GetAxis("HorizontalLeft" + playerNumber);
-
-                if (x > 0)
+                if (counter <= 0)
                 {
-                    Debug.Log("Hallo");
-
-                    pIndex++;
-                    if (pIndex >= mM.SelectPan.GetComponent<SelectMenu>().charSelectBtn.Count)
+                    if (x > 0)
                     {
-                        pIndex = 0;
+                        counter = 0.5f;
+                        
+
+                        pIndex += 1;
+                        if (pIndex >= mM.SelectPan.GetComponent<SelectMenu>().charSelectBtn.Count)
+                        {
+                            pIndex = 0;
+                        }
+
+                        mM.SelectPan.GetComponent<SelectMenu>().UpdateMenu();
                     }
+                    else if (x < 0)
+                    {
+                        counter = 0.33f;
+                        
+
+                        pIndex -= 1;
+                        if (pIndex < 0)
+                        {
+                            pIndex = mM.SelectPan.GetComponent<SelectMenu>().charSelectBtn.Count - 1;
+                        }
+
+                        mM.SelectPan.GetComponent<SelectMenu>().UpdateMenu();
+                    }
+                }
+                else
+                {
+                    counter -= 1 * Time.deltaTime;
+                }
+
+                if (Input.GetButtonDown("TriggerRight" + playerNumber))
+                {
+                    pPrefab = mM.SelectPan.GetComponent<SelectMenu>().charSelectBtn[pIndex].GetComponent<SelectPan>().chara;
+                    mM.SelectPan.GetComponent<SelectMenu>().UpdateMenu();
+
+
                 }
             }
             else
             {
-                counter -= 1 * Time.deltaTime;
-            }
-            
-            
-
-            if (Input.GetButtonDown("TriggerRight" + playerNumber))
-            {
-
+                if (Input.GetButtonDown("TriggerLeft" + playerNumber))
+                {
+                    pPrefab = null;
+                    mM.SelectPan.GetComponent<SelectMenu>().UpdateMenu();
+                }
             }
 
-            mM.SelectPan.GetComponent<SelectMenu>().UpdateMenu();
+
+            
         }
 
-        
-        
+
+
     }
+
+
+        
+    
 }

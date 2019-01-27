@@ -6,6 +6,10 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> InstantObjs = new List<GameObject>();
+    public InterSceneManager iSM;
+    public List<Player> pList = new List<Player>();
+    public List<Transform> startPos = new List<Transform>();
+    public List<HealthBar> bars = new List<HealthBar>();
 
     public void DamageText(Vector3 pos, int damage)
     {
@@ -21,5 +25,34 @@ public class GameManager : MonoBehaviour
         obj.transform.position = pos;
         pos.y += 0.5f;
         Destroy(obj, 1);
+    }
+
+    public void Start()
+    {
+        iSM = GameObject.Find("InterSceneManager").GetComponent<InterSceneManager>();
+
+        pList.Clear();
+
+        foreach(PlayerStats pS in iSM.pS)
+        {
+            GameObject obj = Instantiate(pS.pPrefab);
+            Vector3 pos = startPos[pS.playerNumber - 1].position;
+            obj.transform.position = pos;
+            if(pS.playerNumber == 1)
+            {
+                obj.transform.rotation = Quaternion.Euler(0, -180, 0);
+            }
+            else if(pS.playerNumber == 2)
+            {
+                obj.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+
+            Player p = obj.GetComponent<Player>();
+            p.playerNumber = pS.playerNumber;
+            p.health = 200;
+
+            pList.Add(p);
+            bars[pS.playerNumber - 1].player = p;
+        }
     }
 }

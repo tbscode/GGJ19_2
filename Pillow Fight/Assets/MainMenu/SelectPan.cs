@@ -12,13 +12,17 @@ public class SelectPan : MonoBehaviour
     public InterSceneManager iSM;
     public List<GameObject> selectIcon = new List<GameObject>();
 
+    public Animator anim;
+
     void Start()
     {
-        img = GetComponent<Image>();
+        
     }
 
     public void UpdateThis()
     {
+        img = GetComponent<Image>();
+
         iSM = GameObject.Find("InterSceneManager").GetComponent<InterSceneManager>();
 
         img.sprite = chara.GetComponent<Character>().icon;
@@ -35,6 +39,15 @@ public class SelectPan : MonoBehaviour
             {
                 selectIcon[pS.playerNumber - 1].SetActive(false);
                 
+            }
+
+            if(pS.pPrefab == chara)
+            {
+                selectIcon[pS.playerNumber - 1].GetComponent<Animator>().SetBool("Selected", true);
+            }
+            else
+            {
+                selectIcon[pS.playerNumber - 1].GetComponent<Animator>().SetBool("Selected", false);
             }
         }
     }
