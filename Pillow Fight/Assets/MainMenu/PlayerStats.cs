@@ -69,6 +69,23 @@ public class PlayerStats : MonoBehaviour
                 if (Input.GetButtonDown("TriggerRight" + playerNumber))
                 {
                     pPrefab = mM.SelectPan.GetComponent<SelectMenu>().charSelectBtn[pIndex].GetComponent<SelectPan>().chara;
+                    switch (pIndex)
+                    {
+                        case 0:
+                            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_PEDDA);
+                            break;
+                        case 1:
+                            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_TED);
+                            break;
+                        case 2:
+                            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_POMPF);
+                            break;
+                        case 3:
+                            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.UI_JUSTIN);
+                            break;
+                    }
+
+
                     mM.SelectPan.GetComponent<SelectMenu>().UpdateMenu();
 
 

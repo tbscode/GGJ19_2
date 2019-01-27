@@ -7,6 +7,9 @@ public class InterSceneManager : MonoBehaviour
 {
     public static InterSceneManager iSM;
     public MainMenu mM;
+    public GameObject optionsPanel;
+    public int optionsInt;
+    public float optionsCounter;
 
     public List<PlayerStats> pS = new List<PlayerStats>();
 
@@ -28,9 +31,81 @@ public class InterSceneManager : MonoBehaviour
 
     public void Update()
     {
-        
+        if (Input.GetButtonDown("Submit"))
+        {
+            if(optionsPanel.activeSelf == false)
+            {
+                optionsPanel.SetActive(true);
+                optionsInt = 0;
+            }
+            else
+            {
+                optionsPanel.SetActive(false);
+            }
+
+
+        }
+
+        if (optionsPanel.activeSelf == true)
+        {
+            optionsPanel.SetActive(false);
+
+            float y = Input.GetAxis("VerticalLeft" + 1);
+
+            if(optionsCounter <= 0 && y != 0)
+            {
+                optionsCounter = 0.33f;
+                if(y < 0)
+                {
+                    optionsInt += 1;
+                    if(optionsInt > 2)
+                    {
+                        optionsInt = 0;
+                    }
+                }
+                else if (y > 0)
+                {
+                    optionsInt -= 1;
+                    if (optionsInt < 0)
+                    {
+                        optionsInt = 2;
+                    }
+                }
+            }
+
+
+
+            if (Input.GetButtonDown("TriggerRight" + 1))
+            {
+                if (optionsInt == 0)
+                {
+                    optionsPanel.SetActive(false);
+                }
+                else if (optionsInt == 1)
+                {
+                    EndFight();
+                }
+                else if (optionsInt == 2)
+                {
+                    Application.Quit();
+                }
+            }
+
+            if (Input.GetButtonDown("TriggerLeft" + 1))
+            {
+                optionsPanel.SetActive(false);
+            }
+
+        }
+
+        if(optionsCounter > 0)
+        {
+            optionsCounter -= 1 * Time.deltaTime;
+
+        }
 
         
+
     }
 
     public void StartFight()

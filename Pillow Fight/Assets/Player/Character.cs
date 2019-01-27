@@ -82,10 +82,7 @@ public class Character : MonoBehaviour
                 skillObj[1].SetActive(true);
                 skillObj[1].GetComponent<DivineShield>().lifeTime = 5;
             }
-
-            
-
-
+           
             p.anim.SetTrigger("Attacks");
         }
 
