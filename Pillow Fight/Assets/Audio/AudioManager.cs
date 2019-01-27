@@ -5,6 +5,7 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance = null;
     public FMOD.Studio.EventInstance music;
+    public FMOD.Studio.EventInstance ambient;
 
     void Awake()
     {
@@ -31,9 +32,13 @@ public class AudioManager : MonoBehaviour
         if (_music != FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
             music = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.MUSIC);
+            music = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.AMBIENT);
             music.start();
+            ambient.start();
         }
     }
+
+
 
     public void MusicStop()
     {
