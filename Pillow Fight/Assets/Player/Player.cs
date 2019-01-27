@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public Color pColor;
 
     public float health = 200;
+    public float energy = 100;
 
     void Start()
     {
@@ -34,6 +35,11 @@ public class Player : MonoBehaviour
 
         Move();
         Rotate();
+
+        if(energy < 100)
+        {
+            energy += 5 * Time.deltaTime;
+        }
     }
 
 
