@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
         {
             if(p.energy >= 100)
             {
-                p.energy = 0;
+                p.energy = 1;
                 Special();
             }
         }

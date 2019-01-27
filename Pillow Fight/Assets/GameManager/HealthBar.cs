@@ -7,10 +7,12 @@ public class HealthBar : MonoBehaviour
 {
     public Player player;
     public Slider slide;
+    public Slider slideEnergy;
 
     public void Start()
     {
         slide = GetComponent<Slider>();
+        
     }
 
     void Update()
@@ -18,7 +20,10 @@ public class HealthBar : MonoBehaviour
         if(slide != null && player != null)
         {
             slide.value = player.health;
+
+            slideEnergy.value = player.energy;
         }
         
+
     }
 }

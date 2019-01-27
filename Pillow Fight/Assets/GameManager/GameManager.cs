@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
     public bool FightIsOn;
     public float counter;
 
+    public List<Transform> itemSpawns = new List<Transform>();
+    public List<GameObject> items = new List<GameObject>();
+
+    public float itemCounter;
+
     public void DamageText(Vector3 pos, int damage)
     {
         pos.y += 0;
@@ -43,11 +48,11 @@ public class GameManager : MonoBehaviour
             GameObject obj = Instantiate(pS.pPrefab);
             Vector3 pos = startPos[pS.playerNumber - 1].position;
             obj.transform.position = pos;
-            if(pS.playerNumber == 1)
+            if(pS.playerNumber == 2)
             {
                 obj.transform.rotation = Quaternion.Euler(0, -180, 0);
             }
-            else if(pS.playerNumber == 2)
+            else if(pS.playerNumber == 1)
             {
                 obj.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
@@ -55,12 +60,14 @@ public class GameManager : MonoBehaviour
             Player p = obj.GetComponent<Player>();
             p.playerNumber = pS.playerNumber;
             p.health = 200;
+            p.energy = 0;
             p.pColor = pS.pColor;
 
             pList.Add(p);
             bars[pS.playerNumber - 1].player = p;
         }
 
+        itemCounter = Random.Range(5, 15);
         FightIsOn = true;
 
 
@@ -79,6 +86,26 @@ public class GameManager : MonoBehaviour
                 iSM.EndFight();
             }
 
+        }
+
+        if(FightIsOn == true)
+        {
+            if(itemCounter > 0)
+            {
+                itemCounter -= 1 * Time.deltaTime;
+            }
+            else
+            {
+                int random = Random.Range(0, itemSpawns.Count);
+
+                Vector3 pos = itemSpawns[random].position;
+                int rItem = Random.Range(0, items.Count);
+
+                pos.y = 0.33f;
+                GameObject obj = Instantiate(items[rItem], pos, Quaternion.identity);
+
+                itemCounter = Random.Range(5, 15);
+            }
         }
     }
 
