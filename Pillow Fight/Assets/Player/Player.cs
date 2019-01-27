@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = picture.GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        AudioManager.instance.SetParameterFloat(AudioManager.instance.music, "health", 200f);
+        AudioManager.instance.SetParameterFloat(AudioManager.instance.music, "Vocals", 200f);
     }
 
     void Update()
@@ -44,6 +46,7 @@ public class Player : MonoBehaviour
         }
 
         AudioManager.instance.SetParameterFloat(AudioManager.instance.music, "health", health);
+        AudioManager.instance.SetParameterFloat(AudioManager.instance.music, "Vocals", health);
 
     }
 

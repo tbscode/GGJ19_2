@@ -57,6 +57,8 @@ public class Character : MonoBehaviour
             GameObject obj = Instantiate(skillObj[1], p.spawn.position, Quaternion.identity);
             Tornado tor = obj.GetComponent<Tornado>();
             tor.transform.rotation = transform.rotation;
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_TORNADO);
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_TAKE);
 
             p.anim.SetTrigger("Attacks");
         }
@@ -65,13 +67,16 @@ public class Character : MonoBehaviour
             GameObject obj = Instantiate(skillObj[1], p.spawn.position, Quaternion.identity);
             Shockwave tor = obj.GetComponent<Shockwave>();
             tor.transform.rotation = transform.rotation;
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_WAVE);
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_TAKE);
 
             p.anim.SetTrigger("Attacks");
         }
         else if (pName == "Pompf")
         {
             GameObject obj = Instantiate(skillObj[1], transform.position, Quaternion.identity);
-            
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_ICE);
+            FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_TAKE);
 
             p.anim.SetTrigger("Attacks");
         }
@@ -81,6 +86,8 @@ public class Character : MonoBehaviour
             {
                 skillObj[1].SetActive(true);
                 skillObj[1].GetComponent<DivineShield>().lifeTime = 5;
+                FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_SHIELD);
+                FMODUnity.RuntimeManager.PlayOneShot(FMODPaths.POWER_TAKE);
             }
            
             p.anim.SetTrigger("Attacks");
