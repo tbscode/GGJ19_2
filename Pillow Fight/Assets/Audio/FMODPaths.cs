@@ -34,6 +34,11 @@ public static class FMODPaths
     public static readonly string UI_JUSTIN = "event:/ui/ui_justin";
     public static readonly string UI_POMPF = "event:/ui/ui_pompf";
 
+
+    // powers
+    public static readonly string POWER_TORNADO = "event:/characters/general/power_tornado";
+    public static readonly string POWER_ICE = "event:/characters/general/power_ice";
+
     //      Music
     public static readonly string MUSIC = "event:/music/music";
     public static readonly string AMBIENT = "event:/music/ambient";

@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
         if (_music != FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
             music = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.MUSIC);
-            music = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.AMBIENT);
+            ambient = FMODUnity.RuntimeManager.CreateInstance(FMODPaths.AMBIENT);
             music.start();
             ambient.start();
         }
