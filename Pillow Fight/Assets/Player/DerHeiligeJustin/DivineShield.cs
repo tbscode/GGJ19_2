@@ -23,4 +23,19 @@ public class DivineShield : MonoBehaviour
 
         
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Pillow")
+        {
+            float power = 250;
+
+            Vector3 colPos = other.transform.position;
+            Vector3 pos = transform.position;
+
+            Vector3 direction = colPos - pos;
+
+            other.gameObject.GetComponent<Rigidbody>().AddForce(direction * power);
+        }
+    }
 }

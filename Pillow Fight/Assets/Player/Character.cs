@@ -23,7 +23,7 @@ public class Character : MonoBehaviour
 
         if (Input.GetButtonDown("TriggerLeft" + p.playerNumber))
         {
-            if(p.energy >= 100)
+            if(p.energy >= 10)
             {
                 p.energy = 1;
                 Special();
@@ -88,12 +88,6 @@ public class Character : MonoBehaviour
 
             p.anim.SetTrigger("Attacks");
         }
-
-
-
-
-
-
 
     }
 }
