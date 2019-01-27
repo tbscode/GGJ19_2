@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
         {
             if (col.gameObject.transform.tag == "Player")
             {
-                Debug.Log(impact);
+                
                 int damage = Mathf.RoundToInt(impact);
                 Player player = col.gameObject.GetComponent<Player>();
 
@@ -53,14 +53,6 @@ public class Projectile : MonoBehaviour
             groundImpactSFX.release();
         }
 
-        if (col.gameObject.name == "Wall" || col.gameObject.name == "Wall (1)" || col.gameObject.name == "Wall (2)" || col.gameObject.name == "Wall (3)")
-        {
-            wallImpactSFX.setParameterValue("force", impact);
-            wallImpactSFX.start();
-            FMODUnity.RuntimeManager.AttachInstanceToGameObject(wallImpactSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
-            wallImpactSFX.release();
-        }
-
     }
 
     public void Damage(int damage, Vector3 pos, Player player)
@@ -70,3 +62,20 @@ public class Projectile : MonoBehaviour
         
     }
 }
+
+        if (col.gameObject.name == "Ground")
+        {
+            groundImpactSFX.setParameterValue("force", impact);
+            groundImpactSFX.start();
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(groundImpactSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            groundImpactSFX.release();
+        }
+
+        if (col.gameObject.name == "Wall" || col.gameObject.name == "Wall (1)" || col.gameObject.name == "Wall (2)" || col.gameObject.name == "Wall (3)")
+        {
+            wallImpactSFX.setParameterValue("force", impact);
+            wallImpactSFX.start();
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(wallImpactSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            wallImpactSFX.release();
+        }
+

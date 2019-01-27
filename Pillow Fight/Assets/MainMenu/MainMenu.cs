@@ -11,25 +11,29 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        if(StartPan.activeSelf == true)
+        iSM = GameObject.Find("InterSceneManager").GetComponent<InterSceneManager>();
+
+        if (StartPan.activeSelf == true)
         {
             if(Input.anyKey == true)
             {
                 StartPan.SetActive(false);
                 SelectPan.SetActive(true);
+
+                foreach (PlayerStats pS in iSM.pS)
+                {
+                    pS.pIndex = 0;
+                    pS.pPrefab = null;
+                }
+
+                SelectPan.GetComponent<SelectMenu>().UpdateMenu();
             }
         }
         else if(SelectPan.activeSelf == true)
         {
-            iSM = GameObject.Find("InterSceneManager").GetComponent<InterSceneManager>();
             
-            foreach(PlayerStats pS in iSM.pS)
-            {
-                pS.pIndex = 0;
-                pS.pPrefab = null;
-            }
-
-            SelectPan.GetComponent<SelectMenu>().UpdateMenu();
+            
+            
                 
         }
     }
